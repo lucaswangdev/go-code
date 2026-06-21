@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"log"
 	"os"
 	"time"
 
@@ -35,7 +34,6 @@ func NewLLM(model, apiKey, baseURL string, temperature float64, maxTokens int) *
 		f.WriteString(debugLog)
 		f.Close()
 	}
-	log.Print(debugLog)
 
 	client := openai.NewClientWithConfig(cfg)
 	return &LLM{
@@ -72,7 +70,6 @@ func (l *LLM) Chat(messages []map[string]interface{}, tools []map[string]interfa
 		f.WriteString(debugLog)
 		f.Close()
 	}
-	log.Print(debugLog)
 
 	if l.Temperature > 0 {
 		req.Temperature = float32(l.Temperature)
@@ -104,7 +101,6 @@ func (l *LLM) Chat(messages []map[string]interface{}, tools []map[string]interfa
 			f.WriteString(debugLog)
 			f.Close()
 		}
-		log.Print(debugLog)
 		return nil, fmt.Errorf("chat completion error: %w", err)
 	}
 
@@ -115,7 +111,6 @@ func (l *LLM) Chat(messages []map[string]interface{}, tools []map[string]interfa
 		f.WriteString(debugLog)
 		f.Close()
 	}
-	log.Print(debugLog)
 
 	content := ""
 	if len(resp.Choices) > 0 && resp.Choices[0].Message.Content != "" {
@@ -142,8 +137,8 @@ func (l *LLM) Chat(messages []map[string]interface{}, tools []map[string]interfa
 	}
 
 	result := &LLMResponse{
-		Content:    content,
-		ToolCalls:  toolCalls,
+		Content:   content,
+		ToolCalls: toolCalls,
 	}
 
 	if resp.Usage.PromptTokens > 0 {
