@@ -22,27 +22,27 @@ Remove-Item C:\Windows\System32\go-code.exe
 
 **Windows (PowerShell as Admin):**
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/lucaswangdev/go-code/releases/download/v0.1.0/go-code-windows-amd64.exe" -OutFile "C:\Windows\System32\go-code.exe"
+Invoke-WebRequest -Uri "https://github.com/lucaswangdev/go-code/releases/download/v0.2.0/go-code-windows-amd64.exe" -OutFile "C:\Windows\System32\go-code.exe"
 ```
 
 **macOS (Intel):**
 ```bash
-curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.1.0/go-code-darwin-amd64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
+curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.2.0/go-code-darwin-amd64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
 ```
 
 **macOS (Apple Silicon/M1/M2/M3):**
 ```bash
-curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.1.0/go-code-darwin-arm64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
+curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.2.0/go-code-darwin-arm64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
 ```
 
 **Linux (amd64):**
 ```bash
-curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.1.0/go-code-linux-amd64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
+curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.2.0/go-code-linux-amd64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
 ```
 
 **Linux (arm64):**
 ```bash
-curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.1.0/go-code-linux-arm64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
+curl -L https://github.com/lucaswangdev/go-code/releases/download/v0.2.0/go-code-linux-arm64 -o /tmp/go-code && chmod +x /tmp/go-code && sudo mv /tmp/go-code /usr/local/bin/go-code
 ```
 
 ---
