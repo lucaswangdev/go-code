@@ -32,6 +32,9 @@ func main() {
 	}
 	baseURL := os.Getenv("OPENAI_BASE_URL")
 	if baseURL == "" {
+		baseURL = os.Getenv("OPENAI_API_BASE")
+	}
+	if baseURL == "" {
 		baseURL = cfg.BaseURL
 	}
 
